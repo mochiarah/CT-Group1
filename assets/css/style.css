@@ -409,9 +409,7 @@ body.modal-open {
     min-height: 100vh;
     background: linear-gradient(to bottom, #0f0703, #1a0f0a);
 }
-.conclusion-section .container {
-    max-width: 80vw;
-}
+
 .modern-box {
     background: rgba(255,255,255,0.05);
     padding: 25px;
@@ -423,7 +421,7 @@ body.modal-open {
 }
 .modern-box {
     min-height: 100%;
-    min-width: 400px;
+    min-width: 300px;
 }
 
 .modern-section p {
