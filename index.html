@@ -21,8 +21,10 @@
             <ul class="navbar-nav ms-auto my-2 my-lg-0">
                 <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
                 <li class="nav-item"><a class="nav-link" href="#timeline">Timeline</a></li>
-                <li class="nav-item"><a class="nav-link" href="#overview">Filler</a></li>
-                <li class="nav-item"><a class="nav-link" href="#overview">Filler</a></li>
+                <li class="nav-item"><a class="nav-link" href="#methods">Methods</a></li>
+                <li class="nav-item"><a class="nav-link" href="#evidence">Evidence</a></li>
+                <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
+                <li class="nav-item"><a class="nav-link" href="references.html" target="_blank">References</a></li>
             </ul>
         </div>
     </div>
@@ -116,7 +118,6 @@
                 </p>
             </div>
 
-            <!-- LEFT: TIMELINE -->
             <div class="col-lg-7">
 
 
@@ -160,14 +161,17 @@
 
                 </div>
 
-                <!-- CONTENT -->
                 <div id="timelineContent" class="mt-3">
                     <p>Select a time period to explore.</p>
                 </div>
+                <div id="timelineButton" class="text-center">
+                    <a href="#methods" class="btn btn-light">How Was This Possible?</a>
+                </div>
+
+
 
             </div>
 
-            <!-- RIGHT: IMAGE -->
             <div class="col-lg-5">
                 <div id="timelineImage"></div>
             </div>
@@ -176,163 +180,305 @@
     </div>
 </section>
 
-<section class="page-section bg-secondary" id="gallery">
-    <div class="container-fluid p-0">
-        <div class="row g-0 strips">
-            <div class="col strip" data-bs-toggle="modal" data-bs-target="#modal1">
-                <div class="overlay"></div>
-                <div class="text">Legal cases, DOJ findings & regulatory outcomes</div>
-            </div>
+<!-- *********************** METHODS GALLERY *********************** -->
 
-            <div class="col strip" data-bs-toggle="modal" data-bs-target="#modal2">
-                <div class="overlay"></div>
-                <div class="text">Industry-funded science and suppression of research</div>
-            </div>
-
-            <div class="col strip" data-bs-toggle="modal" data-bs-target="#modal3">
-                <div class="overlay"></div>
-                <div class="text">Modern parallels</div>
-            </div>
-
-            <div class="col strip" data-bs-toggle="modal" data-bs-target="#modal4">
-                <div class="overlay"></div>
-                <div class="text">Lobbying efforts and political influence</div>
-            </div>
-
-            <div class="modal fade" id="modal1">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h5>Section 1</h5>
-                            <button class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <div class="modal-body">
-                            Content for section 1
-                        </div>
-
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" onclick="switchModal('modal1','modal4')">Prev</button>
-                            <button class="btn btn-primary" onclick="switchModal('modal1','modal2')">Next</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="modal2">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h5>Section 2</h5>
-                            <button class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <div class="modal-body">
-                            Content for section 2
-                        </div>
-
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" onclick="switchModal('modal2','modal1')">Prev</button>
-                            <button class="btn btn-primary" onclick="switchModal('modal2','modal3')">Next</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="modal3">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h5>Section 3</h5>
-                            <button class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <div class="modal-body">
-                            Content for section 3
-                        </div>
-
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" onclick="switchModal('modal3','modal2')">Prev</button>
-                            <button class="btn btn-primary" onclick="switchModal('modal3','modal4')">Next</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="modal fade" id="modal4">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-
-                        <div class="modal-header">
-                            <h5>Section 4</h5>
-                            <button class="btn-close" data-bs-dismiss="modal"></button>
-                        </div>
-
-                        <div class="modal-body">
-                            Content for section 4
-                        </div>
-
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" onclick="switchModal('modal4','modal3')">Prev</button>
-                            <button class="btn btn-primary" onclick="switchModal('modal4','modal1')">Next</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+<section class="page-section bg-secondary" id="methods">
+    <div class="text-center">
+        <h2 class="text-white pt-5" >Methods of Suppression</h2>
+        <p class="text-white-50 mb-4">
+            Legal cases and internal documents revealed decades of deliberate misinformation and its consequences.
+        </p>
     </div>
+    <div class="methods-strips">
+            <div class="strip method-strip" data-modal="modal1">
+                <div class="overlay"></div>
+                <div class="text">Industry-Funded Science</div>
+            </div>
+
+            <div class="strip method-strip" data-modal="modal2">
+                <div class="overlay"></div>
+                <div class="text">Lobbying & Influence</div>
+            </div>
+
+            <div class="strip method-strip" data-modal="modal3">
+                <div class="overlay"></div>
+                <div class="text">Advertising Strategies</div>
+            </div>
+    </div>
+
 </section>
 
-<!-- Idk yet -->
-<section class="page-section bg-secondary" id="filler">
-    <div class="container px-4 px-lg-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="text-black mt-5">filler - fun fact here???</h2>
-                <hr class="divider" />
-                <p class="text-black mb-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla nulla
-                    eu lacinia convallis. Cras porta, dolor fermentum accumsan aliquet, metus felis venenatis enim, eu
-                    aliquet turpis magna et tortor. Etiam tempor nibh nec ornare iaculis. Phasellus orci metus, pellentesque
-                    non maximus id, aliquet a dolor. Curabitur non dapibus est. Fusce vitae massa feugiat, pellentesque tortor
-                    non, sollicitudin tellus. Sed est leo, blandit a sapien et, rutrum gravida risus. Curabitur vestibulum mauris
-                    eget orci mattis elementum. Praesent gravida turpis mattis nulla faucibus, eget semper quam aliquet. In et
-                    tempor metus. Proin in leo ligula.
+<!-- modals -->
+<div class="modal fade" id="modal1" tabindex="-1" data-bs-focus="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
 
-                    Nullam a venenatis elit, ut auctor ligula. Nulla facilisi. Ut molestie est et odio dignissim, eget consectetur
-                    metus mollis. Nunc orci nibh, placerat sit amet imperdiet id, feugiat vel nulla. Curabitur mattis velit eu
-                    venenatis laoreet. Integer id gravida justo. In quam felis, vulputate vitae lobortis eget, vestibulum eget metus.
-                    Integer porta, mi ac auctor fringilla, purus nulla finibus dolor, et mollis velit erat sed mauris. Nunc orci magna,
-                    eleifend in hendrerit ac, elementum in erat. Vestibulum tortor urna, consequat sodales blandit vel, tempor egestas
-                    tellus. Ut lorem magna, fermentum ac maximus ac, pretium et sem. Maecenas fermentum ante eget felis maximus, ac
-                    venenatis diam posuere. Integer venenatis purus sed sapien sodales, quis suscipit magna egestas. Nunc bibendum velit
-                    a turpis malesuada condimentum. Aenean velit est, interdum in nulla at, faucibus facilisis justo. Etiam leo tortor,
-                    imperdiet at lacus vitae, feugiat tincidunt leo.
+            <div class="modal-header">
+                <h5>Industry-Funded Science</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                An approach used by tobacco companies to profit themselves was to rely on industry-funded science while concealing actual research on the negative effects of their products. Since 1950, tobacco companies have funded their own studies on the link between smoking and serious health conditions and worked with scientists, public relations agencies, and lobbying groups to influence how information is presented to the public.
+                <br><br>While this may sound reasonable because they are providing the funding for the research, they are actually preventing independent research from occurring, and influencing the public's understanding of scientific data in ways that benefit the industry (Rose, 2024). Since this phenomenon has been occurring for decades, it is nothing new for the industry.
+                <br><br>However, as the use of tobacco products increased over time, consumers became wary of the effects and demanded an accurate study on the risks and negative impacts of the products, but they were dismissed when questioned. Following a thorough investigation, tobacco companies were compelled to release official internal documents about their products, indicating an intentional effort to protect industry interests and delay public understanding of the harms associated with their products.
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="switchModal('modal1','modal3')">Prev</button>
+                <button class="btn btn-primary" onclick="switchModal('modal1','modal2')">Next</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal2">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Lobbying & Influence</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                In Canada, tobacco companies didn’t just rely on advertising. They also worked to influence government decisions and public opinion. Instead of openly denying the dangers of smoking, they often tried to create doubt and slow down action. A major court case in Quebec found that by the early 1960s, tobacco companies had already started what they called a, “policy of silence.” This meant they avoided clearly warning people about the health risks, even though they were aware of them. At a 1963 federal conference on smoking and health, industry representatives argued that the science was still unclear. They worked with public relations experts and international partners to shape how the issue was presented to government officials and the public (Québec Superior Court, 2015).
+
+                <br><br>This shows that the industry wasn’t just selling products, it was actively trying to influence how policymakers understood smoking risks. By making the science seem uncertain, they delayed stronger health regulations and reduced the urgency of government action. Even today, tobacco companies continue to lobby the government. Health Canada warns that the industry may try to influence policies not only on health, but also on taxes, trade, and illegal tobacco. They sometimes use third parties to oppose stricter laws. (Health Canada, n.d.). Recent reports show that tobacco companies in Canada still meet with many parts of the government, including Health Canada, Finance Canada, and even the Prime Minister’s office. In some cases, their recommendations have led to delays in new regulations. (ASH Canada, 2023).
+                <br><br>The main point about the tobacco industry’s influence is that it's been all about creating doubt, delaying action, and shaping policy decisions to protect their business interests.
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="switchModal('modal2','modal1')">Prev</button>
+                <button class="btn btn-primary" onclick="switchModal('modal2','modal3')">Next</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal3">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5>Advertising Strategies</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                Tobacco industries have used many different advertising strategies that work in tandem to overlook cancer research. Firstly, they’ve used misleading health messages on products in an effort to contradict cancer research (Herbst, 2024). They did so through using misleading terms like “light,” “low tar” or “natural” even though these terms have no actual health benefit, and were not regulated terms (Herbst, 2024). Their target demographics were also catered to younger people, using: celebrity endorsements, candy-like flavours and appealing imagery (American Lung Association, 2024).
+                <br><br>They also associated smoking with positive and desirable traits, with ads that portrayed: independence, attractiveness, masculinity, toughness, social success and belonging. Appealing emotionally to a younger, more impressionable audience distracted from cancer risks and made smoking seem normal and even beneficial, overshadowing research. They were also found in court to have deception in their advertising by hiding the addictiveness of nicotine and minimized links to cancer (Herbst, 2024). In addition to all of these efforts, they spent billions on advertising to cover up public health campaigns and ensure an overwhelming majority.
+                <br><br>Overall, the tobacco industry used misleading terms, catered to younger, more vulnerable demographics, and used deceptive marketing to dominate campaigns discouraging smoking use.
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="switchModal('modal3','modal2')">Prev</button>
+                <button class="btn btn-primary" onclick="switchModal('modal3','modal1')">Next</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- *********************** EVIDENCE *********************** -->
+<section class="page-section bg-primary text-white py-5" id="evidence">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2>Evidence, Exposure, and Consequences</h2>
+        </div>
+
+        <div class="evidence-wrapper mx-auto">
+
+            <div class="row">
+
+                <div class="col-lg-4">
+
+                    <div class="evidence-feature">
+                        <h5 class="text-center mb-5">Legal Findings</h5>
+                        <p>
+                            The tobacco industry has been found to have violated and misled the public in several court proceedings and DOJ rulings. A prime instance includes the government's crackdown on Philip Morris USA, a tobacco company, for violating the RICO Act (United States v. Philip Morris USA, Inc., 2023).
+                        </p>
+                        <p>
+                            Throughout its production, Philip Morris USA continued to mislead a large portion of the public about the health concerns associated with their products, and they are not the only ones.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="evidence-feature">
+                        <h5 class="text-center mb-5">Internal Documents</h5>
+                        <p>
+                            Numerous internal documents and court cases show that companies such as Philip Morris USA are aware of the negative effects of their tobacco products and the serious health risks they pose to users, but they actively avoid and divert the issue when confronted (Bero, 2005).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="evidence-feature">
+                        <h5 class="text-center mb-4">Regulatory Outcomes</h5>
+                        <p>
+                            Following the legal disputes and in-depth investigations against these tobacco companies, government representatives enacted a number of significant regulatory changes to stop similar incidents from happening in the future.
+                        </p>
+
+                        <p>
+                            Many companies were compelled to restrict their advertising for each product, which decreased the products' publicity.
+                        </p>
+
+                        <p>
+                            Additionally, they were instructed to issue corrective statements that acknowledged the harmful effects of tobacco use, include warning labels, and make their internal documents publicly available (U.S. Department of Justice, 2011).
+                        </p>
+                    </div>
+
+                </div>
 
 
-                </p>
+
+            </div>
+            <div class="col">
+                <div class="impact-box">
+                    <h5 class="text-center mb-4">Public Health Impact</h5>
+                    <p>
+                        The tobacco industry is responsible for more than 7 million deaths each year, including an estimate of 1.6 million deaths from non-smokers who are exposed to second-hand smoke.
+                    </p>
+
+                    <p>
+                        Tobacco smoke alone holds more than 4000 chemicals with at least 70 of these chemicals being carcinogens, an agent known to cause cancer.
+                    </p>
+                </div>
             </div>
         </div>
+
+    </div>
+
+</section>
+
+<!-- *********************** CONCLUSION *********************** -->
+
+<section class="page-section conclusion-section text-white d-flex align-items-center" id="conclusion">
+
+    <div class="container text-center">
+
+        <h2 class="mt-1 mb-4">Conclusion</h2>
+
+
+        <div class="row justify-content-center text-center">
+
+            <p class="text-white-50 mb-4">
+                While these events reveal what happened in the past, they also raise questions about how scientific evidence is presented today.
+            </p>
+
+            <div class="col-lg-11">
+            <p class="text-white mb-3 fs-5">
+                The tobacco industry’s suppression of scientific evidence was not accidental. Through industry-funded research, lobbying efforts, and misleading advertising strategies, companies were able to influence public understanding, delay regulation, and protect their business interests.
+            </p>
+
+            <p class="text-white mb-3 fs-5">
+                Legal cases, internal documents, and government investigations later revealed the extent of these actions, along with their long-term public health consequences.
+            </p>
+
+            <p class="text-white mb-3 fs-5">
+                Unfortunately, this pattern of influencing how scientific evidence is presented is not limited to the tobacco industry or to the past.
+            </p>
+
+            <div class="text-center my-3">
+                <hr style="width: 60px; height: 3px; background-color: #e86a00; border: none; margin: auto;">
+            </div>
+        </div>
+
+
+
+        <div class="modern-section">
+
+            <div class="text-center mb-4">
+                <h3>Modern Parallels</h3>
+                <p class="text-white-50">
+                    Similar strategies can still be seen in other industries today.
+                </p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4 mb-3">
+                    <div class="modern-box">
+                        <h5>Pharmaceutical Industry</h5>
+                        <p>
+                            Pharmaceutical companies use strategic marketing to promote their products while not highlighting its harmful effects.
+                        </p>
+                        <p>
+                            Purdue Pharma, an American pharmaceutical company, “invented, manufactured and aggressively marketed opioid products for decades, fueling waves of addiction and overdose deaths across the country.”
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="modern-box">
+                        <h5>Vaping Products</h5>
+                        <p>
+                            Vaping products also use the same strategies, twisting scientific evidence to mislead consumers and label vapes as a safer alternative to cigarettes without proper evidence (Commissioner, 2019).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <div class="modern-box">
+                        <h5>Nicotine Alternatives</h5>
+                        <p>
+                            Nicotine products, while they also mislead, use independent research to shape the narrative behind their products.
+                        </p>
+                        <p>
+                            They advertise themselves as an alternative solution to tobacco smokers who do not want or cannot quit smoking, using independent studies to claim that their products have a significantly less risk of diseases that smoking/tobacco use has (Jimenez-Ruiz, et al., 2025).
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <div class="text-center my-3">
+                <hr style="width: 60px; height: 3px; background-color: #e86a00; border: none; margin: auto;">
+            </div>
+
+            <div class="final-statement text-center">
+
+                <p class="text-white mb-3 fs-5">
+                    This demonstrates that scientific evidence alone is not always enough to inform the public. When powerful industries are able to influence how that evidence is presented, it can shape public understanding and delay meaningful action.
+                </p>
+
+                <h3>
+                    As a result, the consequences of this influence can extend beyond misinformation and affect millions of lives.
+                </h3>
+
+            </div>
+
+    </div>
     </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script>
     function switchModal(current, next) {
-        const currentModal = bootstrap.Modal.getInstance(document.getElementById(current));
-        const nextModal = new bootstrap.Modal(document.getElementById(next));
+        const currentEl = document.getElementById(current);
+        const nextEl = document.getElementById(next);
+
+        const currentModal = bootstrap.Modal.getInstance(currentEl);
+        const nextModal = bootstrap.Modal.getOrCreateInstance(nextEl);
+
+        currentEl.addEventListener('hidden.bs.modal', function handler() {
+            currentEl.removeEventListener('hidden.bs.modal', handler);
+
+            nextModal.show();
+
+            document.body.classList.add('modal-open');
+            document.body.style.overflow = 'hidden';
+            document.body.style.paddingRight = '0px';
+        }, { once: true });
 
         currentModal.hide();
-
-        setTimeout(() => {
-            nextModal.show();
-        }, 200);
     }
     const reveals = document.querySelectorAll('#overview .reveal');
 
@@ -352,72 +498,89 @@
         const content = document.getElementById("timelineContent");
         const visual = document.getElementById("timelineImage");
 
-        if (period === 1) {
-            content.innerHTML = `
-            <h4>1950s – 1960s</h4>
-            <p>
-                Early research began linking smoking to serious health risks. Instead of acknowledging this, tobacco companies chose to delay action and avoid clear warnings.
-            </p>
-            <p>
-                By 1962, this approach became known as a “policy of silence,” where companies knowingly withheld information about the dangers of smoking.
-            </p>
-        `;
-            visual.style.backgroundImage = "url('assets/img/timeline1.jpg')";
-        }
 
-        if (period === 2) {
-            content.innerHTML = `
-            <h4>1980s - 1990s</h4>
-            <p>
-                Tobacco companies continued to influence public understanding by funding their own research and shaping how scientific evidence was presented.
-            </p>
-            <p>
-                At the same time, governments began introducing regulations, partly in response to decades of misleading information and delayed public awareness.
-            </p>
-        `;
-            visual.style.backgroundImage = "url('assets/img/timeline2.jpg')";
-        }
+        visual.style.opacity = 0
 
-        if (period === 3) {
-            content.innerHTML = `
-            <h4>2000 - 2010</h4>
-            <p>
-                As evidence became harder to suppress, governments introduced stronger warning labels on cigarette packaging.
-            </p>
-            <p>
-                Canada became the first country to require graphic warnings, marking a shift toward openly communicating the health risks long downplayed by the industry.
-            </p>
-        `;
-            visual.style.backgroundImage = "url('assets/img/timeline3.jpg')";
-        }
+        setTimeout(() => {
+            if (period === 1) {
+                content.innerHTML = `
+                <h4>1950s – 1960s</h4>
+                <p>
+                    Early research began linking smoking to serious health risks. Instead of acknowledging this, tobacco companies chose to delay action and avoid clear warnings.
+                </p>
+                <p>
+                    By 1962, this approach became known as a “policy of silence,” where companies knowingly withheld information about the dangers of smoking.
+                </p>
+            `;
+                visual.style.backgroundImage = "url('assets/img/timeline1.jpg')";
+            }
 
-        if (period === 4) {
-            content.innerHTML = `
-            <h4>2010 - 2020</h4>
-            <p>
-                Regulations became stricter, with larger warning labels and standardized packaging removing branding and marketing influence.
-            </p>
-            <p>
-                These changes reflected growing public awareness and reduced ability for companies to shape how information was perceived.
-            </p>
-        `;
-            visual.style.backgroundImage = "url('assets/img/timeline4.jpg')";
-        }
+            if (period === 2) {
+                content.innerHTML = `
+                <h4>1980s - 1990s</h4>
+                <p>
+                    Tobacco companies continued to influence public understanding by funding their own research and shaping how scientific evidence was presented.
+                </p>
+                <p>
+                    At the same time, governments began introducing regulations, partly in response to decades of misleading information and delayed public awareness.
+                </p>
+            `;
+                visual.style.backgroundImage = "url('assets/img/timeline2.jpg')";
+            }
 
-        if (period === 5) {
-            content.innerHTML = `
-            <h4>2020+</h4>
-            <p>
-                Ongoing legal cases and investigations forced companies to acknowledge past harm and release internal documents.
-            </p>
-            <p>
-                By 2025, court rulings required compensation for those affected, exposing decades of suppressed evidence and misinformation.
-            </p>
-        `;
-            visual.style.backgroundImage = "url('assets/img/timeline5.jpg')";
-        }
+            if (period === 3) {
+                content.innerHTML = `
+                <h4>2000 - 2010</h4>
+                <p>
+                    As evidence became harder to suppress, governments introduced stronger warning labels on cigarette packaging.
+                </p>
+                <p>
+                    Canada became the first country to require graphic warnings, marking a shift toward openly communicating the health risks long downplayed by the industry.
+                </p>
+            `;
+                visual.style.backgroundImage = "url('assets/img/timeline3.jpg')";
+            }
+
+            if (period === 4) {
+                content.innerHTML = `
+                <h4>2010 - 2020</h4>
+                <p>
+                    Regulations became stricter, with larger warning labels and standardized packaging removing branding and marketing influence.
+                </p>
+                <p>
+                    These changes reflected growing public awareness and reduced ability for companies to shape how information was perceived.
+                </p>
+            `;
+                visual.style.backgroundImage = "url('assets/img/timeline4.jpg')";
+            }
+
+            if (period === 5) {
+                content.innerHTML = `
+                <h4>2020+</h4>
+                <p>
+                    Ongoing legal cases and investigations forced companies to acknowledge past harm and release internal documents.
+                </p>
+                <p>
+                    By 2025, court rulings required compensation for those affected, exposing decades of suppressed evidence and misinformation.
+                </p>
+            `;
+                visual.style.backgroundImage = "url('assets/img/timeline5.jpg')";
+            }
+
+            visual.style.opacity = 1;
+        }, 200);
 
     }
+
+    document.querySelectorAll('.method-strip').forEach(strip => {
+        strip.addEventListener('click', function () {
+            const modalId = this.dataset.modal;
+            const modalEl = document.getElementById(modalId);
+            const modal = new bootstrap.Modal(modalEl);
+
+            modal.show();
+        });
+    });
 </script>
 </body>
 </html>
