@@ -1,80 +1,78 @@
-:root {
-    .btn-primary {
-        --bs-btn-color: #fff;
-        --bs-btn-bg: #f4883a;
-        --bs-btn-border-color: #ffffff;
-        --bs-btn-hover-color: #fff;
-        --bs-btn-hover-bg: #cf6031;
-        --bs-btn-hover-border-color: #ffffff;
-    }
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 
-    .bg-primary {
-        background-color: #cf6031 !important;
-    }
+body {
+    font-family: "Raleway", sans-serif !important;
+}
 
-    .bg-secondary {
-        background-color: #ffffff !important;
+section {
+    scroll-margin-top: 40px;
+}
 
+p {
+    color: rgba(255,255,255,0.85);
+}
 
-    }
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #e86a00;
+    --bs-btn-border-color: #ffffff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #ff8c42;
+    --bs-btn-hover-border-color: #ffffff;
+}
 
+.bg-primary {
+    background-color: #1a0f0a !important;
+}
+
+.bg-secondary {
+    background-color: #3b1f12 !important;
 }
 
 /* ----------------------------------------------------------- */
 
 #mainNav {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    background-color: #fff;
-    transition: background-color 0.2s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
 }
+
 #mainNav .navbar-brand {
-    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 700;
-    color: #212529;
+    color: #ffffff;
+
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-    color: #6c757d;
-    font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: #ffffff;
     font-size: 0.9rem;
     padding: 0.75rem 0;
 }
 
-@media (min-width: 992px) {
-    #mainNav {
-        box-shadow: none;
-        background-color: transparent;
-    }
-    #mainNav .navbar-brand {
-        color: rgba(255, 255, 255, 0.7);
-    }
-    #mainNav .navbar-brand:hover {
-        color: #fff;
-    }
-    #mainNav .navbar-nav .nav-item .nav-link {
-        color: rgba(255, 255, 255, 0.7);
-        padding: 0 1rem;
-    }
-    #mainNav .navbar-nav .nav-item .nav-link:hover {
-        color: #fff;
-    }
-    #mainNav .navbar-nav .nav-item:last-child .nav-link {
-        padding-right: 0;
-    }
-}
+.divider-light {
+    border: 0;
+    height: 3px;
+    width: 25%;
+    margin: auto auto 1em;
+    background-color: #e86a00;
+    text-align: center;
+    font-size: 20px;
 
+}
+/* ------ HERO ------ */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    /* background setup (if you're using one) */
-    background: url('../img/hero.jpg') no-repeat center center;
+    background: url('../img/bg-hero.jpg') no-repeat center center;
     background-size: cover;
 }
 
 header.hero {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../img/bg-hero.jpg");
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(26, 15, 10, 0.8)), url("../img/bg-hero.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,7 +80,232 @@ header.hero {
 header.hero h1, header.hero .h1 {
     font-size: 2.25rem;
 }
+
+
+/* member popup box thing */
+.card {
+    background-color: rgba(255, 255, 255, 0.84) !important;
+
+}
+
+/* hero animation, fade ins */
+.fade-title,
+.fade-subtitle,
+.fade-button {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+.fade-title {
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.fade-subtitle {
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.fade-button {
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 1.8s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----------------------------------------------------------- */
+
+/* overview section */
+#overview {
+    min-height: 100vh;
+}
+
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ------- timeline ------- */
+
+.timeline {
+    position: relative;
+    margin-left: 20px;
+    overflow: hidden;
+}
+
+#timeline {
+    min-height: 80vh;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #e86a00;
+}
+
+.timeline-item h5 {
+    font-size: 1.2rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 45px;
+    cursor: pointer;
+}
+
+.timeline-item .dot {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #e86a00;
+    border-radius: 50%;
+    transition: transform 0.2s;
+}
+
+.timeline-item .content {
+    margin-left: 40px;
+}
+
+.timeline-item:hover .content {
+    color: #ffb380;
+}
+
+
+#timelineImage {
+    width: 100%;
+    height: 70vh;
+    margin-left: 2em;
+    border-radius: 10px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: background-image 0.5s ease;
+}
+#timelineContent {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+
+    margin-top: 20px;
+
+    min-height: 300px;
+
+    max-height: 300px;
+
+    padding-right: 10px;
+}
+
+#timelineContent h4 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+#timelineContent p {
+    font-size: 1.1rem;
+}
+/* ------- gallery ------- */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.strip {
+    position: relative;
+    min-height: 100vh;
+
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.strip:nth-child(1) {
+    background-image: url("../img/img1.jpg");
+}
+
+.strip:nth-child(2) {
+    background-image: url("../img/img2.jpg");
+}
+
+.strip:nth-child(3) {
+    background-image: url("../img/img3.jpg");
+}
+
+.strip:nth-child(4) {
+    background-image: url("../img/img4.jpg");
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.text {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #592100;
+
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.strip:hover .overlay {
+    background: rgba(0,0,0,0.6);
+}
+
+.strip:hover .text {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* ----------------------------------------------------------- */
+/* media queries - dynamic sizing */
+
 @media (min-width: 992px) {
+    /* ------ NAVBAR ----- */
+    #mainNav .navbar-brand:hover {
+        color: #ff9167;
+    }
+    #mainNav .navbar-nav .nav-item .nav-link {
+        padding: 0 1rem;
+
+    }
+    #mainNav .navbar-nav .nav-item .nav-link:hover {
+        color: #ff9167;
+    }
+    #mainNav .navbar-nav .nav-item:last-child .nav-link {
+        padding-right: 0;
+    }
+
+    /* ----- HERO ----- */
     header.hero {
         height: 100vh;
         min-height: 40rem;
@@ -99,42 +322,6 @@ header.hero h1, header.hero .h1 {
 @media (min-width: 1200px) {
     header.hero h1, header.hero .h1 {
         font-size: 3.5rem;
-    }
-}
-
-/* ----------------------------------------------------------- */
-
-/* FORMAT BETTER LATER */
-.card {
-    background-color: rgba(255, 255, 255, 0.84) !important;
-
-}
-
-hr {
-    border: 0;
-    height: 5px;
-    background-color: #ffffff;
-}
-
-/* ----------------------------------------------------------- */
-/* media queries - dynamic sizing */
-
-@media (max-width: 992px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    #overview .row {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #overview img {
-        margin-top: 20px;
-    }
-
-    .navbar {
-        padding: 10px;
     }
 }
 
